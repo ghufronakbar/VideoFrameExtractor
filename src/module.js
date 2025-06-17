@@ -9,10 +9,9 @@ import { SERVER_URL } from "./constant/index.js"
 import FormData from "form-data";
 import fetch from "node-fetch";
 import { uploadCloudinary } from "./utils/uploadCloudinary.js";
-import { OPENAI_API_KEY } from "./constant/openai.js"
 import cloudinary from "./config/cloudinary.js";
 import multer from 'multer';
-import { gptJson, transcribeAudio } from "./utils/opena i.js";
+import { gptJson, transcribeAudio } from "./utils/openai.js";
 const upload = multer({ dest: 'uploads/' });
 
 
@@ -440,7 +439,7 @@ router.post("/api/main", upload.single("video"), async (req, res) => {
         if (!isOpenAIResponseResult(result)) {
             throw new Error("Invalid result structure from OpenAI (does not match expected interface)");
         }
-        return res.json({ result, audio: audioData, frames: framesData });
+        return res.json({ result, audio: audioData, frames: categories });
 
     } catch (error) {
         if (fs.existsSync(inputPath)) fs.unlinkSync(inputPath);
