@@ -18,7 +18,7 @@ app.use(cors());
 
 
 app.get('/', (req, res) => {
-  return res.status(200).json({ status: 200, message: "Hello World" });
+  return res.status(200).json({ status: 200, message: `Hello World ${APP_NAME}` });
 })
 
 app.use('/api/uploads', express.static(path.join(process.cwd(), 'uploads')));
