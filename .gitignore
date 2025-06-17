@@ -1,0 +1,15 @@
+.env
+node_modules/
+.DS_Store
+*.log
+*.pid
+*.lock
+*.swp
+*.tmp
+*.bak
+*.pyc
+*.class
+*.lock
+dist/
+prisma/migrations/
+prisma/dbml/
