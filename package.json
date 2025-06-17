@@ -1,7 +1,7 @@
 {
-  "name": "xxx",
+  "name": "video-frame-extractor",
   "version": "1.0.0",
-  "description": "xxx",
+  "description": "VideoFrameExtractor",
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
