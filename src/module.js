@@ -12,7 +12,7 @@ import { uploadCloudinary } from "./utils/uploadCloudinary.js";
 import { OPENAI_API_KEY } from "./constant/openai.js"
 import cloudinary from "./config/cloudinary.js";
 import multer from 'multer';
-import { gptJson, transcribeAudio } from "./utils/openAi.js";
+import { gptJson, transcribeAudio } from "./utils/openai.js";
 const upload = multer({ dest: 'uploads/' });
 
 
