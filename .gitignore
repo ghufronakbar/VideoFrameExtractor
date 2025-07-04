@@ -13,3 +13,4 @@ node_modules/
 dist/
 prisma/migrations/
 prisma/dbml/
+/src/generated/prisma
