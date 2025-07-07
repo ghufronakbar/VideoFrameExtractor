@@ -352,7 +352,7 @@ router.post("/api/main", upload.single("video"), async (req, res) => {
       // Clean up file upload karena sudah tidak perlu
       if (fs.existsSync(inputPath)) fs.unlinkSync(inputPath);
       // Return hasil lama dari DB
-      return res.json(existing.result);
+      return res.status(200).json(existing.result);
     }
     console.log("data not found in DB, processing...");
 
@@ -470,7 +470,7 @@ router.post("/api/main", upload.single("video"), async (req, res) => {
       },
     });
 
-    return res.json(created.result);
+    return res.status(200).json(created.result);
   } catch (error) {
     console.error(error);
     if (fs.existsSync(inputPath)) fs.unlinkSync(inputPath);
